@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>بیرون‌بر و باربیکیو سامین | شیراز</title>
+<meta name="description" content="بیرون‌بر و باربیکیو سامین — بیش از ۱۸ سال تجربه. ارسال رایگان در محدوده. منطقه ۱۰ شیراز.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"بیرون‌بر و باربیکیو سامین","address":{"@type":"PostalAddress","streetAddress":"بلوار آفرینش، ابتدای بلوار ملائک جنوبی","addressLocality":"شیراز","addressCountry":"IR"},"telephone":["09172164646","09172164747","09172164848","07136273000"],"servesCuisine":"Iranian"}</script>
+<style>
+@font-face{font-family:'Yekan';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Yekan';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Yekan';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Yekan';src:url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+
+/* ━━ TOKENS ━━ */
+:root{
+  --pk:#D80371;--pk2:#F5057E;--pk-d:#B5025E;
+  --pk-a:rgba(216,3,113,.1);--pk-g:rgba(216,3,113,.28);
+  --font:'Yekan',Tahoma,sans-serif;
+  --r:10px;--r2:16px;--r3:22px;
+  --tr:.2s cubic-bezier(.4,0,.2,1);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+[data-theme=light]{
+  --bg:#F5F5F7;--bg2:#FFFFFF;--bg3:#FAFAFA;
+  --surface:#FFFFFF;--surface2:#F0F0F3;
+  --txt:#0D0D0D;--txt2:#555;--txt3:#999;
+  --border:rgba(0,0,0,.08);--border2:rgba(0,0,0,.13);
+  --hdr:rgba(255,255,255,.92);
+  --sh:0 1px 8px rgba(0,0,0,.07);
+  --sh2:0 6px 24px rgba(0,0,0,.1);
+  --status-bg:var(--pk);
+}
+[data-theme=dark]{
+  --bg:#0C0C0E;--bg2:#141418;--bg3:#18181D;
+  --surface:#1C1C22;--surface2:#24242C;
+  --txt:#F2F2F5;--txt2:#9999AA;--txt3:#55555F;
+  --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.13);
+  --hdr:rgba(12,12,14,.94);
+  --sh:0 1px 8px rgba(0,0,0,.4);
+  --sh2:0 6px 24px rgba(0,0,0,.55);
+  --status-bg:#0D0D0D;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{font-family:var(--font);direction:rtl;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.6;padding-bottom:calc(72px + var(--safe-b));transition:background .3s,color .3s}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+button{cursor:pointer;border:none;background:none;font-family:var(--font);outline:none}
+input{outline:none;font-family:var(--font)}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--pk);border-radius:2px}
+::selection{background:var(--pk-a);color:var(--txt)}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* ━━━━━━━━━━━━━━
+   STATUS BAR
+━━━━━━━━━━━━━━ */
+#status-bar{
+  background:var(--pk);padding:8px 16px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:.74rem;font-weight:700;color:#fff;letter-spacing:.2px;
+  position:sticky;top:0;z-index:300;
+}
+.pulse{width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0;animation:pulseAnim 1.8s ease-in-out infinite}
+@keyframes pulseAnim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+
+/* ━━━━━━━━━━━━━━
+   APP HEADER
+━━━━━━━━━━━━━━ */
+#app-hdr{position:sticky;top:33px;z-index:200;background:var(--hdr);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--border);transition:box-shadow .25s}
+#app-hdr.scrolled{box-shadow:var(--sh)}
+.hdr-inner{display:flex;align-items:center;gap:10px;height:58px}
+.app-logo{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--pk2),var(--pk));border-radius:10px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px var(--pk-g);flex-shrink:0}
+.logo-mark svg{width:18px;height:18px;fill:#fff}
+.logo-txt .brand{font-size:.86rem;font-weight:900;color:var(--txt);line-height:1.2}
+.logo-txt .city{font-size:.6rem;color:var(--txt3);font-weight:500}
+
+.hdr-search{flex:1;display:flex;align-items:center;gap:7px;background:var(--surface2);border:1px solid var(--border);border-radius:50px;padding:0 13px;transition:var(--tr)}
+.hdr-search:focus-within{border-color:var(--pk);background:var(--surface)}
+.hdr-search svg{width:13px;height:13px;stroke:var(--txt3);fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
+.hdr-search input{background:none;border:none;flex:1;font-size:.79rem;color:var(--txt);padding:9px 0;caret-color:var(--pk)}
+.hdr-search input::placeholder{color:var(--txt3)}
+
+.hdr-tools{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.theme-btn{width:34px;height:34px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:var(--tr);flex-shrink:0}
+.theme-btn:hover{border-color:var(--pk)}
+.theme-btn svg{width:15px;height:15px;stroke:var(--txt2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.moon-i,.sun-i{display:block}
+[data-theme=light] .sun-i{display:none}
+[data-theme=dark] .moon-i{display:none}
+.hdr-call{display:flex;align-items:center;gap:5px;background:var(--pk);color:#fff;padding:8px 14px;border-radius:50px;font-size:.76rem;font-weight:700;transition:var(--tr);box-shadow:0 3px 12px var(--pk-g);flex-shrink:0}
+.hdr-call:hover{transform:translateY(-1px);box-shadow:0 5px 18px var(--pk-g)}
+.hdr-call svg{width:12px;height:12px;fill:#fff;flex-shrink:0}
+.hdr-call-txt{display:inline}
+
+/* ━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━ */
+#hero{padding:22px 0 0;background:var(--bg);position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;top:-60px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(216,3,113,.08) 0%,transparent 68%);pointer-events:none}
+[data-theme=dark] #hero::before{background:radial-gradient(circle,rgba(216,3,113,.15) 0%,transparent 68%)}
+
+.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);padding:24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;position:relative;overflow:hidden;box-shadow:var(--sh2)}
+[data-theme=light] .hero-card{background:linear-gradient(145deg,#fff 0%,#FFF5F9 100%)}
+[data-theme=dark] .hero-card{background:linear-gradient(145deg,var(--surface) 0%,var(--bg3) 100%)}
+.hero-card::after{content:'';position:absolute;inset:0;border-radius:var(--r3);background:linear-gradient(135deg,var(--pk-a) 0%,transparent 55%);pointer-events:none}
+
+.hero-label{display:inline-flex;align-items:center;gap:5px;background:var(--pk-a);border:1px solid rgba(216,3,113,.22);color:var(--pk2);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:11px}
+.hero-label svg{width:10px;height:10px;fill:var(--pk2)}
+.hero-h1{font-size:clamp(1.4rem,4vw,2.3rem);font-weight:900;color:var(--txt);line-height:1.2;margin-bottom:9px}
+.hero-h1 em{color:var(--pk);font-style:normal}
+.hero-sub{font-size:.82rem;color:var(--txt2);line-height:1.7;margin-bottom:16px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:6px}
+.hchip{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--border);color:var(--txt2);font-size:.7rem;font-weight:600;padding:5px 11px;border-radius:50px}
+.hchip svg{width:11px;height:11px;stroke:var(--pk);fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
+
+/* hero visual */
+.hero-visual{position:relative;z-index:1;flex-shrink:0}
+.hero-img{width:130px;height:130px;border-radius:50%;object-fit:cover;box-shadow:0 8px 32px var(--pk-g);animation:hfloat 4s ease-in-out infinite;border:3px solid rgba(216,3,113,.2)}
+.hero-img-placeholder{width:130px;height:130px;border-radius:50%;background:var(--pk-a);border:3px dashed rgba(216,3,113,.3);display:flex;align-items:center;justify-content:center;animation:hfloat 4s ease-in-out infinite}
+.hero-img-placeholder svg{width:44px;height:44px;stroke:var(--pk);fill:none;stroke-width:1.4}
+@keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* quick nav */
+.qnav{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.qnav-btn{display:flex;flex-direction:column;align-items:center;gap:6px;padding:13px 8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);cursor:pointer;transition:var(--tr)}
+.qnav-btn:hover,.qnav-btn.on{background:var(--pk-a);border-color:rgba(216,3,113,.3)}
+.qnav-btn:hover .qico,.qnav-btn.on .qico{background:var(--pk)}
+.qnav-btn:hover .qico svg,.qnav-btn.on .qico svg{stroke:#fff}
+.qico{width:36px;height:36px;border-radius:9px;background:var(--surface2);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.qico svg{width:17px;height:17px;stroke:var(--pk);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.qnav-btn span{font-size:.68rem;font-weight:700;color:var(--txt2);text-align:center;line-height:1.3}
+
+/* ━━━━━━━━━━━━━━
+   SECTION LABEL
+━━━━━━━━━━━━━━ */
+.sec-lbl{display:flex;align-items:center;justify-content:space-between;margin:24px 0 12px}
+.sec-lbl-l{display:flex;align-items:center;gap:9px}
+.sec-dot{width:3px;height:18px;background:var(--pk);border-radius:2px;box-shadow:0 0 8px var(--pk-g)}
+.sec-lbl h2{font-size:.95rem;font-weight:900;color:var(--txt)}
+.sec-cnt{font-size:.68rem;font-weight:700;color:var(--pk);background:var(--pk-a);padding:2px 8px;border-radius:50px}
+
+/* ━━━━━━━━━━━━━━
+   OFFERS SCROLL
+━━━━━━━━━━━━━━ */
+#offers-wrap{padding:0 0 4px}
+.offers-scroll{display:flex;gap:10px;overflow-x:auto;padding:4px 16px 8px;margin:0 -16px;scrollbar-width:none}
+.offers-scroll::-webkit-scrollbar{display:none}
+.offer-card{flex-shrink:0;width:220px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;position:relative;transition:var(--tr)}
+.offer-card:hover{transform:translateY(-3px);border-color:var(--pk);box-shadow:0 6px 22px rgba(216,3,113,.18)}
+.offer-img{height:110px;background:var(--surface2);overflow:hidden}
+.offer-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.offer-card:hover .offer-img img{transform:scale(1.06)}
+.offer-badge{position:absolute;top:8px;right:8px;background:var(--pk);color:#fff;font-size:.63rem;font-weight:900;padding:3px 8px;border-radius:50px}
+.offer-body{padding:10px 11px}
+.offer-name{font-size:.82rem;font-weight:700;color:var(--txt);margin-bottom:4px}
+.offer-prices{display:flex;align-items:center;gap:6px;margin-bottom:8px}
+.offer-old{font-size:.7rem;color:var(--txt3);text-decoration:line-through}
+.offer-new{font-size:.9rem;font-weight:900;color:var(--pk)}
+.offer-btn{width:100%;padding:7px;border-radius:50px;background:var(--pk);color:#fff;font-family:var(--font);font-size:.73rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:5px}
+.offer-btn:hover{background:var(--pk-d)}
+.offer-btn svg{width:11px;height:11px;fill:#fff}
+
+/* ━━━━━━━━━━━━━━
+   FILTER BAR
+━━━━━━━━━━━━━━ */
+#filter-bar{position:sticky;top:91px;z-index:180;background:var(--hdr);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.filter-pills{display:flex;gap:6px;overflow-x:auto;padding:9px 0;scrollbar-width:none}
+.filter-pills::-webkit-scrollbar{display:none}
+.fpill{display:flex;align-items:center;gap:5px;padding:6px 13px;border-radius:50px;font-size:.74rem;font-weight:700;color:var(--txt2);background:var(--surface2);border:1.5px solid transparent;cursor:pointer;white-space:nowrap;transition:var(--tr);flex-shrink:0}
+.fpill svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.fpill:hover{color:var(--pk);background:var(--pk-a)}
+.fpill.on{background:var(--pk);color:#fff;border-color:var(--pk);box-shadow:0 2px 10px var(--pk-g)}
+.fpill.on svg{stroke:#fff}
+
+/* ━━━━━━━━━━━━━━
+   MENU
+━━━━━━━━━━━━━━ */
+#menu-area{padding:0 0 16px}
+.cat-title{display:flex;align-items:center;gap:8px;font-size:.73rem;font-weight:700;color:var(--txt3);letter-spacing:.5px;text-transform:uppercase;margin:22px 0 11px}
+.cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:11px}
+
+/* ━━ FOOD CARD ━━ */
+.fc{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:var(--tr);position:relative}
+.fc:hover{transform:translateY(-3px);border-color:rgba(216,3,113,.25);box-shadow:var(--sh2)}
+.fc.hidden{display:none}
+.fc-img{height:168px;background:var(--surface2);overflow:hidden;position:relative;flex-shrink:0}
+.fc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.fc:hover .fc-img img{transform:scale(1.05)}
+.fc-tag{position:absolute;top:8px;right:8px;font-size:.63rem;font-weight:900;padding:3px 8px;border-radius:50px;line-height:1}
+.fc-tag.best{background:var(--pk);color:#fff}
+.fc-tag.eco{background:#1a7a38;color:#fff}
+.fc-tag.new{background:#1456b8;color:#fff}
+.fc-tag.special{background:#6b3f1a;color:#fff}
+.fc-disc-tag{position:absolute;top:8px;left:8px;font-size:.63rem;font-weight:900;padding:3px 8px;border-radius:50px;background:#b56b00;color:#fff}
+.fc-body{padding:11px 12px 0;flex:1}
+.fc-name{font-size:.88rem;font-weight:700;color:var(--txt);margin-bottom:3px;line-height:1.3}
+.fc-desc{font-size:.73rem;color:var(--txt2);line-height:1.6;margin-bottom:3px}
+.fc-ingr{font-size:.67rem;color:var(--txt3);line-height:1.5}
+.fc-foot{padding:9px 12px 11px;display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto;border-top:1px solid var(--border)}
+.fc-price-blk{display:flex;flex-direction:column;gap:2px}
+.fc-price-row{display:flex;align-items:baseline;gap:5px}
+.fc-price{font-size:1.05rem;font-weight:900;color:var(--pk)}
+.fc-unit{font-size:.64rem;color:var(--txt3)}
+.fc-old{font-size:.69rem;color:var(--txt3);text-decoration:line-through}
+.fc-btn{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--pk);color:#fff;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;box-shadow:0 3px 10px var(--pk-g);transition:var(--tr)}
+.fc-btn:hover{transform:scale(1.1);box-shadow:0 5px 16px var(--pk-g)}
+.fc-btn svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ━━━━━━━━━━━━━━
+   STATS
+━━━━━━━━━━━━━━ */
+#stats-sec{padding:8px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--r2);overflow:hidden;border:1px solid var(--border)}
+.stat-c{background:var(--surface);padding:20px 12px;text-align:center}
+.stat-ico{width:36px;height:36px;border-radius:9px;background:var(--pk-a);display:flex;align-items:center;justify-content:center;margin:0 auto 7px}
+.stat-ico svg{width:17px;height:17px;stroke:var(--pk);fill:none;stroke-width:2;stroke-linecap:round}
+.stat-n{font-size:1.5rem;font-weight:900;color:var(--pk);line-height:1}
+.stat-l{font-size:.66rem;color:var(--txt2);font-weight:600;margin-top:4px}
+
+/* ━━━━━━━━━━━━━━
+   WHY
+━━━━━━━━━━━━━━ */
+#why-sec{padding:0 0 8px}
+.why-scroll{display:flex;gap:10px;overflow-x:auto;padding:4px 16px 8px;margin:0 -16px;scrollbar-width:none}
+.why-scroll::-webkit-scrollbar{display:none}
+.why-card{flex-shrink:0;width:160px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:15px;transition:var(--tr)}
+.why-card:hover{border-color:rgba(216,3,113,.25);transform:translateY(-2px)}
+.why-card:hover .wico{background:var(--pk)}
+.why-card:hover .wico svg{stroke:#fff}
+.wico{width:38px;height:38px;border-radius:9px;background:var(--pk-a);display:flex;align-items:center;justify-content:center;margin-bottom:9px;transition:var(--tr)}
+.wico svg{width:17px;height:17px;stroke:var(--pk);fill:none;stroke-width:2;stroke-linecap:round;transition:stroke .2s}
+.why-card h3{font-size:.78rem;font-weight:700;color:var(--txt);margin-bottom:3px}
+.why-card p{font-size:.68rem;color:var(--txt2);line-height:1.6}
+
+/* ━━━━━━━━━━━━━━
+   REVIEWS
+━━━━━━━━━━━━━━ */
+#reviews-sec{padding:0 0 8px}
+.rev-scroll{display:flex;gap:10px;overflow-x:auto;padding:4px 16px 8px;margin:0 -16px;scrollbar-width:none}
+.rev-scroll::-webkit-scrollbar{display:none}
+.rev-card{flex-shrink:0;width:255px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);padding:15px}
+.rev-stars{display:flex;gap:2px;margin-bottom:7px}
+.rev-stars svg{width:12px;height:12px;fill:#F5A623}
+.rev-txt{font-size:.76rem;color:var(--txt);line-height:1.7;margin-bottom:11px;font-style:italic}
+.rev-auth{display:flex;align-items:center;gap:8px;border-top:1px solid var(--border);padding-top:10px}
+.rev-av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--pk2),var(--pk));display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:900;color:#fff;flex-shrink:0}
+.rev-name{font-size:.75rem;font-weight:700;color:var(--txt)}
+.rev-role{font-size:.63rem;color:var(--txt3)}
+.rev-date{font-size:.62rem;color:var(--txt3);margin-top:1px}
+
+/* ━━━━━━━━━━━━━━
+   LOCATION
+━━━━━━━━━━━━━━ */
+#loc-sec{padding:8px 0 16px}
+.loc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh)}
+.loc-map{height:160px;background:var(--surface2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--txt3);font-size:.78rem;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.loc-map::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 44px),repeating-linear-gradient(90deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 44px)}
+.loc-pin{width:44px;height:44px;border-radius:50%;background:var(--pk);display:flex;align-items:center;justify-content:center;box-shadow:0 0 20px var(--pk-g);position:relative;z-index:1;animation:pinBounce 2s ease-in-out infinite}
+.loc-pin svg{width:20px;height:20px;fill:#fff}
+@keyframes pinBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.loc-body{padding:16px}
+.loc-addr{display:flex;align-items:flex-start;gap:9px;margin-bottom:13px}
+.loc-addr svg{width:15px;height:15px;stroke:var(--pk);fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0;margin-top:2px}
+.loc-addr p{font-size:.81rem;color:var(--txt);line-height:1.7}
+.loc-btns{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}
+.loc-btn{display:flex;align-items:center;gap:5px;padding:7px 14px;border-radius:50px;border:1px solid var(--border2);background:var(--bg3);color:var(--txt2);font-family:var(--font);font-size:.74rem;font-weight:700;cursor:pointer;transition:var(--tr)}
+.loc-btn:hover{border-color:var(--pk);color:var(--pk)}
+.loc-btn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.phones-list{display:flex;flex-direction:column;gap:7px}
+.phone-row{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);transition:var(--tr)}
+.phone-row:hover{border-color:var(--pk);background:var(--pk-a)}
+.phone-num{font-size:.88rem;font-weight:700;color:var(--txt);direction:ltr}
+.phone-call{display:flex;align-items:center;gap:5px;padding:6px 13px;border-radius:50px;background:var(--pk);color:#fff;font-family:var(--font);font-size:.73rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr)}
+.phone-call:hover{background:var(--pk-d)}
+.phone-call svg{width:11px;height:11px;fill:#fff}
+.insta-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:50px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;font-family:var(--font);font-size:.8rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr);margin-top:10px;text-decoration:none}
+.insta-btn:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(131,58,180,.3)}
+.insta-btn svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
+
+/* ━━━━━━━━━━━━━━
+   FAQ
+━━━━━━━━━━━━━━ */
+#faq-sec{padding:8px 0 16px}
+.faq-list{display:flex;flex-direction:column;gap:6px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.faq-item.on{border-color:rgba(216,3,113,.28)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;font-family:var(--font);font-size:.82rem;font-weight:700;color:var(--txt);text-align:right;background:none;cursor:pointer;transition:color .2s}
+.faq-q:hover{color:var(--pk)}
+.faq-arr{width:21px;height:21px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .28s,background .28s}
+.faq-arr svg{width:10px;height:10px;stroke:var(--txt3);fill:none;stroke-width:2.5;stroke-linecap:round}
+.faq-item.on .faq-arr{transform:rotate(180deg);background:var(--pk-a)}
+.faq-item.on .faq-arr svg{stroke:var(--pk)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .34s ease}
+.faq-item.on .faq-body{max-height:120px}
+.faq-body p{padding:0 15px 13px;font-size:.79rem;color:var(--txt2);line-height:1.8}
+
+/* ━━━━━━━━━━━━━━
+   FOOTER
+━━━━━━━━━━━━━━ */
+#footer{background:var(--bg2);border-top:1px solid var(--border);padding:22px 0}
+.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+.f-brand p{font-size:.74rem;color:var(--txt2);line-height:1.8;margin:9px 0 11px}
+.f-socs{display:flex;gap:6px}
+.f-soc{width:30px;height:30px;border-radius:8px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.f-soc svg{width:13px;height:13px;stroke:var(--txt3);fill:none;stroke-width:2;stroke-linecap:round}
+.f-soc:hover{background:var(--pk);border-color:var(--pk)}
+.f-soc:hover svg{stroke:#fff}
+.f-col h4{font-size:.77rem;font-weight:700;color:var(--txt);margin-bottom:9px}
+.f-links{display:flex;flex-direction:column;gap:5px}
+.f-links a{font-size:.74rem;color:var(--txt2);transition:color .2s}
+.f-links a:hover{color:var(--pk)}
+.f-hr .row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);font-size:.72rem}
+.f-hr .row:last-child{border:none}
+.f-hr .row span:first-child{color:var(--txt)}
+.f-hr .row span:last-child{color:var(--txt2)}
+.footer-bot{border-top:1px solid var(--border);margin-top:18px;padding-top:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:7px}
+.footer-bot p{font-size:.68rem;color:var(--txt3)}
+.footer-bot a{color:var(--pk);font-weight:700}
+
+/* ━━━━━━━━━━━━━━
+   BOTTOM NAV
+━━━━━━━━━━━━━━ */
+#bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:250;background:var(--hdr);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-top:1px solid var(--border);padding:8px 0 calc(8px + var(--safe-b));display:flex;justify-content:space-around;align-items:center}
+.bnav-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 14px;cursor:pointer;color:var(--txt3);transition:color .2s;flex:1}
+.bnav-item.active{color:var(--pk)}
+.bnav-item svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bnav-item span{font-size:.6rem;font-weight:700}
+.bnav-center{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--pk2),var(--pk));display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px var(--pk-g);transition:var(--tr);flex-shrink:0;margin-top:-14px;cursor:pointer;text-decoration:none}
+.bnav-center:hover{transform:scale(1.08)}
+.bnav-center svg{width:20px;height:20px;fill:#fff}
+
+/* ━━━━━━━━━━━━━━
+   FOOD PARTY — dark panel
+━━━━━━━━━━━━━━ */
+#party-sec{background:var(--txt);padding:44px 0;position:relative;overflow:hidden}
+[data-theme=dark] #party-sec{background:#000}
+#party-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(216,3,113,.1) 0%,transparent 70%);pointer-events:none}
+.party-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.party-head h2{font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:900;color:#fff}
+.party-head p{font-size:.8rem;color:#999;margin-top:3px}
+/* 3D countdown */
+.cd-wrap{display:flex;align-items:center;gap:5px;direction:ltr;flex-shrink:0}
+.cd-unit{display:flex;flex-direction:column;align-items:center;gap:3px}
+.cd-face{width:52px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#2a2a2a 0%,#1a1a1a 100%);border:1px solid #333;box-shadow:0 4px 0 #0a0a0a,inset 0 1px 0 rgba(255,255,255,.07);position:relative;transform-style:preserve-3d;transition:transform .15s ease,box-shadow .15s ease}
+.cd-face.flip{transform:rotateX(-8deg);box-shadow:0 1px 0 #0a0a0a}
+.cd-split{position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(0,0,0,.45)}
+.cd-lbl{font-size:.58rem;font-weight:700;color:#555;letter-spacing:.5px;text-transform:uppercase}
+.cd-sep{font-size:1.3rem;font-weight:900;color:var(--pk);margin-bottom:16px;opacity:.7}
+.party-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.party-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:var(--r2);overflow:hidden;position:relative;transition:var(--tr)}
+.party-card:hover{transform:translateY(-3px);border-color:var(--pk);box-shadow:0 6px 22px rgba(216,3,113,.22)}
+.party-img{height:140px;overflow:hidden;background:#111}
+.party-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.party-card:hover .party-img img{transform:scale(1.06)}
+.party-disc{position:absolute;top:8px;right:8px;background:var(--pk);color:#fff;font-size:.63rem;font-weight:900;padding:3px 8px;border-radius:50px}
+.party-body{padding:11px}
+.party-name{font-size:.86rem;font-weight:700;color:#eee;margin-bottom:3px}
+.party-desc{font-size:.72rem;color:#777;line-height:1.6;margin-bottom:9px}
+.party-prices{display:flex;align-items:center;gap:7px;margin-bottom:9px}
+.party-old{font-size:.7rem;color:#555;text-decoration:line-through}
+.party-new{font-size:.95rem;font-weight:900;color:var(--pk)}
+.party-btn{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;padding:8px;border-radius:50px;background:var(--pk);color:#fff;font-family:var(--font);font-size:.76rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr)}
+.party-btn:hover{background:var(--pk-d)}
+.party-btn svg{width:12px;height:12px;fill:#fff}
+
+/* ━━━━━━━━━━━━━━
+   ORDER MODAL
+━━━━━━━━━━━━━━ */
+.modal-bd{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.65);backdrop-filter:blur(8px);display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .26s}
+.modal-bd.show{opacity:1;pointer-events:all}
+.modal-sheet{background:var(--bg2);border-radius:var(--r3) var(--r3) 0 0;border-top:1px solid var(--border2);width:100%;max-width:480px;padding:18px 18px calc(20px + var(--safe-b));transform:translateY(100%);transition:transform .32s cubic-bezier(.34,1.3,.64,1)}
+.modal-bd.show .modal-sheet{transform:none}
+.modal-handle{width:34px;height:4px;background:var(--border2);border-radius:2px;margin:0 auto 16px}
+.modal-title{font-size:.95rem;font-weight:900;color:var(--txt);margin-bottom:4px}
+.modal-food{font-size:.78rem;color:var(--txt2);margin-bottom:14px;padding-bottom:13px;border-bottom:1px solid var(--border)}
+.modal-ph-list{display:flex;flex-direction:column;gap:7px}
+.modal-ph-row{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);transition:var(--tr)}
+.modal-ph-row:hover{border-color:var(--pk);background:var(--pk-a)}
+.modal-ph-num{font-size:.88rem;font-weight:700;color:var(--txt);direction:ltr}
+.modal-call{display:flex;align-items:center;gap:4px;padding:6px 13px;border-radius:50px;background:var(--pk);color:#fff;font-family:var(--font);font-size:.73rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr)}
+.modal-call svg{width:11px;height:11px;fill:#fff}
+
+/* ━━━━━━━━━━━━━━
+   POPUP
+━━━━━━━━━━━━━━ */
+.pop-bd{position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .26s}
+.pop-bd.show{opacity:1;pointer-events:all}
+.pop-box{background:var(--bg2);border-radius:var(--r2);padding:26px 22px;max-width:320px;width:100%;text-align:center;position:relative;transform:scale(.93) translateY(10px);transition:transform .32s cubic-bezier(.34,1.56,.64,1);box-shadow:0 20px 52px rgba(0,0,0,.25);border:1px solid var(--border)}
+.pop-bd.show .pop-box{transform:none}
+.pop-close{position:absolute;top:10px;left:10px;width:26px;height:26px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.pop-close:hover{background:var(--pk);border-color:var(--pk)}
+.pop-close svg{width:10px;height:10px;stroke:var(--txt3);fill:none;stroke-width:2.5;stroke-linecap:round}
+.pop-close:hover svg{stroke:#fff}
+.pop-icon{width:56px;height:56px;border-radius:14px;background:var(--pk-a);display:flex;align-items:center;justify-content:center;margin:0 auto 13px}
+.pop-icon svg{width:26px;height:26px;stroke:var(--pk);fill:none;stroke-width:1.8;stroke-linecap:round}
+.pop-badge{display:inline-block;background:var(--pk);color:#fff;font-size:.67rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:9px}
+.pop-box h3{font-size:1rem;font-weight:900;color:var(--txt);margin-bottom:7px}
+.pop-box p{font-size:.82rem;color:var(--txt2);line-height:1.7;margin-bottom:6px}
+.pop-disc{font-size:1.5rem;font-weight:900;color:var(--pk);margin:4px 0 14px}
+.pop-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:10px;border-radius:50px;background:var(--pk);color:#fff;font-family:var(--font);font-size:.82rem;font-weight:700;border:none;cursor:pointer;transition:var(--tr)}
+.pop-btn:hover{background:var(--pk-d)}
+
+/* ━━━━━━━━━━━━━━
+   REVEAL
+━━━━━━━━━━━━━━ */
+.rv{opacity:0;transform:translateY(12px);transition:opacity .44s ease,transform .44s ease}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.05s}.d2{transition-delay:.1s}.d3{transition-delay:.15s}.d4{transition-delay:.2s}
+
+/* ━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━ */
+@media(max-width:900px){
+  .footer-inner{grid-template-columns:1fr 1fr;gap:20px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .hero-card{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .food-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .hdr-call-txt{display:none}
+  .party-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:420px){
+  .food-grid{grid-template-columns:1fr}
+  .party-grid{grid-template-columns:1fr}
+  .qnav{gap:5px}
+}
+</style>
+</head>
+<body>
+
+<!-- ✏️ CONFIG -->
+<script>
+const PHONES=['09172164646','09172164747','09172164848','07136273000'];
+const HERO_IMG='banner.png';
+const P={
+  bf1:85000,bf2:105000,bf3:95000,
+  eq1:95000,
+  kh1:195000,kh2:205000,
+  kb1:235000,kb2:275000,kb3:295000,
+  khorak1:215000,
+  polo1:225000,polo2:235000,
+  sh1:185000,
+  dn1:255000,dn2:265000,
+  ds1:55000,drink1:18000,pish1:45000
+};
+/* درصد تخفیف — 0 یعنی بدون تخفیف */
+const DISC={kh1:25,kb1:15,dn1:20,khorak1:10,bf2:0,bf1:0,bf3:0,eq1:0,kh2:0,kb2:0,kb3:0,polo1:0,polo2:0,sh1:0,dn2:0,ds1:0,drink1:0,pish1:0};
+function fmtP(n){return(+n).toLocaleString('fa-IR')}
+function finalP(id){const p=P[id]||0,d=DISC[id]||0;return d?Math.round(p*(1-d/100)):p}
+function phSVG(){return`<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="currentColor"/></svg>`;}
+</script>
+
+<!-- STATUS BAR -->
+<div id="status-bar">
+  <div class="pulse"></div>
+  ارسال رایگان در محدوده — بلوار آفرینش، ملائک جنوبی شیراز
+</div>
+
+<!-- HEADER -->
+<header id="app-hdr">
+ <div class="wrap">
+  <div class="hdr-inner">
+   <div class="app-logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6h3.5c.8 0 1.5.7 1.5 1.5v.5"/><path d="M18 21v-6"/></svg>
+    </div>
+    <div class="logo-txt">
+      <div class="brand">بیرون‌بر و باربیکیو سامین</div>
+      <div class="city">منطقه ۱۰ شیراز — ۱۸ سال سابقه</div>
+    </div>
+   </div>
+   <div class="hdr-search">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="search" id="search-input" placeholder="جستجوی غذا...">
+   </div>
+   <div class="hdr-tools">
+    <button class="theme-btn" id="themeBtn">
+      <svg class="moon-i" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sun-i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <a href="tel:09172164646" class="hdr-call">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="currentColor"/></svg>
+      <span class="hdr-call-txt">سفارش</span>
+    </a>
+   </div>
+  </div>
+ </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+ <div class="wrap">
+  <div class="hero-card rv">
+   <div>
+    <div class="hero-label">
+      <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      بیش از ۱۸ سال تجربه در شیراز
+    </div>
+    <h1 class="hero-h1">طعم اصیل ایرانی<br>در <em>خانه شما</em></h1>
+    <p class="hero-sub">از سال ۱۳۸۵ در خدمت خانواده‌های شیرازی.<br>هر روز با مواد تازه و دستور اصیل.</p>
+    <div class="hero-chips">
+      <div class="hchip"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>ارسال رایگان</div>
+      <div class="hchip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>تحویل ۴۵ دقیقه</div>
+      <div class="hchip"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>مجوز بهداشت</div>
+    </div>
+   </div>
+   <div class="hero-visual" id="heroVisual"></div>
+  </div>
+
+  <!-- quick nav -->
+  <div class="qnav rv d2">
+   <div class="qnav-btn" data-sec="sec-breakfast">
+    <div class="qico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+    <span>صبحانه</span>
+   </div>
+   <div class="qnav-btn" data-sec="sec-lunch">
+    <div class="qico"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/></svg></div>
+    <span>نهار</span>
+   </div>
+   <div class="qnav-btn" data-sec="sec-dessert">
+    <div class="qico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+    <span>دسر و نوشیدنی</span>
+   </div>
+   <div class="qnav-btn" data-sec="sec-dinner">
+    <div class="qico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+    <span>شام</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- OFFERS SCROLL -->
+<section id="offers-wrap">
+ <div class="wrap">
+  <div class="sec-lbl rv">
+   <div class="sec-lbl-l"><div class="sec-dot"></div><h2>پیشنهاد ویژه</h2></div>
+   <span class="sec-cnt" id="offer-cnt"></span>
+  </div>
+ </div>
+ <div class="offers-scroll rv d1" id="offers-scroll"></div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+ <div class="wrap">
+  <div class="filter-pills">
+   <button class="fpill on" data-f="all"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>همه</button>
+   <button class="fpill" data-f="eco"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>اقتصادی</button>
+   <button class="fpill" data-f="kh"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v11"/></svg>چلوخورشت</button>
+   <button class="fpill" data-f="kb"><svg viewBox="0 0 24 24"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>چلوکباب</button>
+   <button class="fpill" data-f="khorak"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>خوراک</button>
+   <button class="fpill" data-f="polo"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>پلو ایرانی</button>
+   <button class="fpill" data-f="dinner"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>شام</button>
+  </div>
+ </div>
+</div>
+
+<!-- MENU -->
+<section id="menu-area">
+ <div class="wrap">
+  <!-- BREAKFAST -->
+  <div id="sec-breakfast">
+   <div class="cat-title">صبحانه</div>
+   <div class="food-grid" id="grid-breakfast"></div>
+  </div>
+  <!-- LUNCH -->
+  <div id="sec-lunch">
+   <div class="cat-title">نهار — اقتصادی</div>
+   <div class="food-grid" id="grid-eq"></div>
+   <div class="cat-title" style="margin-top:18px">چلوخورشت</div>
+   <div class="food-grid" id="grid-kh"></div>
+   <div class="cat-title" style="margin-top:18px">چلوکباب</div>
+   <div class="food-grid" id="grid-kb"></div>
+   <div class="cat-title" style="margin-top:18px">خوراک</div>
+   <div class="food-grid" id="grid-khorak"></div>
+   <div class="cat-title" style="margin-top:18px">پلو ایرانی</div>
+   <div class="food-grid" id="grid-polo"></div>
+   <div class="cat-title" style="margin-top:18px">شوید لوبیا</div>
+   <div class="food-grid" id="grid-shouid"></div>
+  </div>
+  <!-- DESSERT -->
+  <div id="sec-dessert">
+   <div class="cat-title">دسر، پیش‌غذا و نوشیدنی</div>
+   <div class="food-grid" id="grid-dessert"></div>
+  </div>
+  <!-- DINNER -->
+  <div id="sec-dinner">
+   <div class="cat-title">شام</div>
+   <div class="food-grid" id="grid-dinner"></div>
+  </div>
+ </div>
+</section>
+
+<!-- FOOD PARTY (dark) -->
+<section id="party-sec">
+ <div class="wrap">
+  <div class="party-head rv">
+   <div><h2>🎉 فود پارتی سامین</h2><p>قیمت‌های استثنایی — فقط برای مدت محدود</p></div>
+   <div class="cd-wrap" dir="ltr">
+    <div class="cd-unit"><div style="position:relative"><div class="cd-face" id="cd-h">۰۵</div><div class="cd-split"></div></div><span class="cd-lbl">ساعت</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><div style="position:relative"><div class="cd-face" id="cd-m">۰۰</div><div class="cd-split"></div></div><span class="cd-lbl">دقیقه</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><div style="position:relative"><div class="cd-face" id="cd-s">۰۰</div><div class="cd-split"></div></div><span class="cd-lbl">ثانیه</span></div>
+   </div>
+  </div>
+  <div class="party-grid rv d2" id="party-grid"></div>
+ </div>
+</section>
+
+<!-- STATS -->
+<section id="stats-sec" class="rv" style="padding:0">
+ <div class="wrap" style="padding:16px 16px">
+  <div class="stats-grid">
+   <div class="stat-c"><div class="stat-ico"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></div><div class="stat-n" data-n="30000" data-s="+">۰</div><div class="stat-l">سفارش موفق</div></div>
+   <div class="stat-c"><div class="stat-ico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="stat-n" data-n="15000" data-s="+">۰</div><div class="stat-l">مشتری راضی</div></div>
+   <div class="stat-c"><div class="stat-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><div class="stat-n" data-n="18" data-s=" سال">۰</div><div class="stat-l">سابقه</div></div>
+   <div class="stat-c"><div class="stat-ico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="stat-n" data-n="99" data-s="٪">۰</div><div class="stat-l">رضایت</div></div>
+  </div>
+ </div>
+</section>
+
+<!-- WHY -->
+<section id="why-sec">
+ <div class="wrap"><div class="sec-lbl rv"><div class="sec-lbl-l"><div class="sec-dot"></div><h2>چرا سامین؟</h2></div></div></div>
+ <div class="why-scroll rv d1">
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/></svg></div><h3>مواد تازه</h3><p>هر روز مستقیم از بازار</p></div>
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg></div><h3>ارسال رایگان</h3><p>در محدوده خدمات‌رسانی</p></div>
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>تحویل سریع</h3><p>در کمتر از ۴۵ دقیقه</p></div>
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>بهداشت کامل</h3><p>مجوز رسمی بهداشت</p></div>
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h3>۱۸ سال تجربه</h3><p>از سال ۱۳۸۵</p></div>
+  <div class="why-card"><div class="wico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>پشتیبانی</h3><p>۷ صبح تا ۱۲ شب</p></div>
+ </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews-sec">
+ <div class="wrap"><div class="sec-lbl rv"><div class="sec-lbl-l"><div class="sec-dot"></div><h2>نظرات مشتریان</h2></div></div></div>
+ <div class="rev-scroll rv d1" id="rev-scroll"></div>
+</section>
+
+<!-- LOCATION -->
+<section id="loc-sec">
+ <div class="wrap">
+  <div class="sec-lbl rv"><div class="sec-lbl-l"><div class="sec-dot"></div><h2>آدرس و تماس</h2></div></div>
+  <div class="loc-card rv d1">
+   <div class="loc-map">
+    <div class="loc-pin"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="white"/><circle cx="12" cy="10" r="3" fill="#D80371"/></svg></div>
+    <span>شیراز، بلوار آفرینش</span>
+   </div>
+   <div class="loc-body">
+    <div class="loc-addr">
+     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+     <p>شیراز، منطقه ۱۰، بلوار آفرینش، ابتدای بلوار ملائک جنوبی</p>
+    </div>
+    <div class="loc-btns">
+     <a href="https://maps.google.com/?q=شیراز+بلوار+آفرینش+ملائک+جنوبی" target="_blank" class="loc-btn"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Google Maps</a>
+     <a href="https://balad.ir/" target="_blank" class="loc-btn"><svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>بلد</a>
+     <a href="https://neshan.org/" target="_blank" class="loc-btn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>نشان</a>
+    </div>
+    <div class="phones-list" id="phones-list"></div>
+    <a href="https://instagram.com/samin.food1" target="_blank" class="insta-btn">
+     <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+     مشاهده اینستاگرام سامین
+    </a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq-sec">
+ <div class="wrap">
+  <div class="sec-lbl rv"><div class="sec-lbl-l"><div class="sec-dot"></div><h2>سوالات متداول</h2></div></div>
+  <div class="faq-list rv d1">
+   <div class="faq-item on"><button class="faq-q">زمان تحویل چقدر است؟<div class="faq-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-body"><p>معمولاً ۳۵ تا ۵۰ دقیقه. در ساعات شلوغی ممکن است کمی بیشتر شود.</p></div></div>
+   <div class="faq-item"><button class="faq-q">ارسال رایگان است؟<div class="faq-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-body"><p>بله! ارسال در محدوده خدمات‌رسانی کاملاً رایگان است.</p></div></div>
+   <div class="faq-item"><button class="faq-q">چطور پرداخت کنم؟<div class="faq-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-body"><p>پرداخت نقدی در محل یا کارت‌خوان سیار.</p></div></div>
+   <div class="faq-item"><button class="faq-q">ساعت کاری چیست؟<div class="faq-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-body"><p>هر روز از ۷ صبح تا ۱۲ شب در خدمت شما هستیم.</p></div></div>
+   <div class="faq-item"><button class="faq-q">سفارش حجیم برای مجالس؟<div class="faq-arr"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-body"><p>بله، با هماهنگی قبلی سفارش‌های بزرگ با تخفیف ویژه آماده می‌کنیم.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+ <div class="wrap">
+  <div class="footer-inner">
+   <div class="f-brand">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
+     <div class="logo-mark" style="width:30px;height:30px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6h3.5c.8 0 1.5.7 1.5 1.5v.5"/><path d="M18 21v-6"/></svg></div>
+     <span style="font-size:.86rem;font-weight:900;color:var(--txt)">بیرون‌بر و باربیکیو سامین</span>
+    </div>
+    <p>از سال ۱۳۸۵ با کیفیتی ثابت در خدمت خانواده‌های شیرازی.</p>
+    <div class="f-socs">
+     <a href="https://instagram.com/samin.food1" class="f-soc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+     <a href="tel:09172164646" class="f-soc"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    </div>
+   </div>
+   <div class="f-col"><h4>دسترسی سریع</h4><div class="f-links"><a href="#sec-breakfast">صبحانه</a><a href="#sec-lunch">نهار</a><a href="#sec-dinner">شام</a><a href="#loc-sec">آدرس</a><a href="#faq-sec">سوالات</a></div></div>
+   <div class="f-col"><h4>ساعت کاری</h4><div class="f-hr"><div class="row"><span>همه روزه</span><span>۷:۰۰ – ۲۴:۰۰</span></div><div class="row"><span>پنجشنبه – جمعه</span><span>۷:۰۰ – ۲۴:۰۰</span></div></div></div>
+  </div>
+  <div class="footer-bot">
+   <p>© ۱۴۰۳ بیرون‌بر و باربیکیو سامین — تمامی حقوق محفوظ است</p>
+   <p>ساخته شده با 💙 <a href="https://sarieweb.ir" target="_blank">سریع‌وب</a></p>
+  </div>
+ </div>
+</footer>
+
+<!-- BOTTOM NAV -->
+<nav id="bottom-nav">
+ <div class="bnav-item active" onclick="scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <span>خانه</span>
+ </div>
+ <div class="bnav-item" onclick="document.getElementById('menu-area').scrollIntoView({behavior:'smooth',block:'start'})">
+  <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+  <span>منو</span>
+ </div>
+ <a href="tel:09172164646" class="bnav-center">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="white"/></svg>
+ </a>
+ <div class="bnav-item" onclick="document.getElementById('loc-sec').scrollIntoView({behavior:'smooth',block:'start'})">
+  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <span>آدرس</span>
+ </div>
+ <div class="bnav-item" onclick="document.getElementById('faq-sec').scrollIntoView({behavior:'smooth',block:'start'})">
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+  <span>سوالات</span>
+ </div>
+</nav>
+
+<!-- ORDER MODAL -->
+<div class="modal-bd" id="orderModal">
+ <div class="modal-sheet">
+  <div class="modal-handle"></div>
+  <div class="modal-title">ثبت سفارش سریع</div>
+  <div class="modal-food" id="modalFood"></div>
+  <div class="modal-ph-list" id="modalPhones"></div>
+ </div>
+</div>
+
+<!-- POPUPS -->
+<div class="pop-bd" id="popBd">
+ <div class="pop-box">
+  <button class="pop-close" id="popClose"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="pop-icon" id="popIcon"></div>
+  <div class="pop-badge" id="popBadge"></div>
+  <h3 id="popTitle"></h3>
+  <p id="popBody"></p>
+  <div class="pop-disc" id="popDisc"></div>
+  <button class="pop-btn" onclick="window.location.href='tel:09172164646'" id="popBtn"></button>
+ </div>
+</div>
+
+<script>
+'use strict';
+
+/* ── FOOD DATA ── */
+const FOODS={
+  breakfast:[
+    {id:'bf1',name:'نیمرو با نان',desc:'تخم‌مرغ تازه با روغن زیتون',ingr:'تخم‌مرغ، روغن، نان',w:'۲۵۰گ',cat:'eco',badge:'اقتصادی',img:'breakfast-1.jpg'},
+    {id:'bf2',name:'صبحانه کامل سامین',desc:'تخم‌مرغ، پنیر، گوجه، خیار، مربا، عسل',ingr:'تخم‌مرغ، پنیر، سبزیجات',w:'۴۵۰گ',cat:'',badge:'',img:'breakfast-2.jpg'},
+    {id:'bf3',name:'فطیر مسقطی',desc:'فطیر خانگی با مسقطی اصیل شیرازی',ingr:'آرد، مسقطی، شکر',w:'۳۰۰گ',cat:'special',badge:'ویژه',img:'breakfast-3.jpg'},
+  ],
+  eq:[{id:'eq1',name:'چلو ساده',desc:'برنج زعفرانی با کره و زعفران',ingr:'برنج، زعفران، کره',w:'۳۵۰گ',cat:'eco',badge:'اقتصادی',img:'lunch-eq-1.jpg'}],
+  kh:[
+    {id:'kh1',name:'چلوخورشت قورمه‌سبزی',desc:'خورشت قورمه اصیل با گوشت گوساله تازه',ingr:'گوشت گوساله، سبزی، لوبیا',w:'۵۵۰گ',cat:'best',badge:'پرفروش',img:'lunch-kh-1.jpg'},
+    {id:'kh2',name:'چلوخورشت فسنجان',desc:'فسنجان با گردوی اصیل و مرغ',ingr:'مرغ، گردو، رب انار',w:'۵۵۰گ',cat:'',badge:'',img:'lunch-kh-2.jpg'},
+  ],
+  kb:[
+    {id:'kb1',name:'چلوکباب کوبیده',desc:'کوبیده دست‌پخت با گوشت تازه',ingr:'گوشت گاو و گوسفند، پیاز',w:'۴۵۰گ',cat:'best',badge:'پرفروش',img:'lunch-kb-1.jpg'},
+    {id:'kb2',name:'چلوکباب برگ',desc:'فیله گوشت گوساله مرغوب',ingr:'فیله گوساله، لیمو، زعفران',w:'۴۵۰گ',cat:'',badge:'',img:'lunch-kb-2.jpg'},
+    {id:'kb3',name:'چلوکباب مخلوط',desc:'ترکیب کوبیده و برگ با برنج زعفرانی',ingr:'گوشت مخلوط، برنج، زعفران',w:'۵۵۰گ',cat:'special',badge:'ویژه',img:'lunch-kb-3.jpg'},
+  ],
+  khorak:[{id:'khorak1',name:'خوراک مرغ و قارچ',desc:'مرغ با قارچ تازه و سس مخصوص',ingr:'مرغ، قارچ، فلفل رنگی',w:'۴۵۰گ',cat:'new',badge:'جدید',img:'lunch-khorak-1.jpg'}],
+  polo:[
+    {id:'polo1',name:'زرشک‌پلو با مرغ',desc:'مرغ برشته با برنج زرشک و زعفران',ingr:'مرغ، زرشک، زعفران',w:'۵۵۰گ',cat:'best',badge:'پرفروش',img:'lunch-polo-1.jpg'},
+    {id:'polo2',name:'باقالی‌پلو با ماهیچه',desc:'ماهیچه ساعت‌ها پخته با برنج باقالی',ingr:'ماهیچه، باقالی، شوید',w:'۶۰۰گ',cat:'',badge:'',img:'lunch-polo-2.jpg'},
+  ],
+  shouid:[{id:'sh1',name:'شوید لوبیا',desc:'خوراک لوبیا چیتی با شوید تازه',ingr:'لوبیا چیتی، شوید، سیر',w:'۴۰۰گ',cat:'eco',badge:'اقتصادی',img:'lunch-shouid-1.jpg'}],
+  dessert:[
+    {id:'ds1',name:'فالوده شیرازی',desc:'فالوده اصیل شیرازی با شربت آلبالو',ingr:'نشاسته، شربت، لیمو',w:'۲۵۰گ',cat:'special',badge:'ویژه',img:'dessert-1.jpg'},
+    {id:'pish1',name:'سالاد شیرازی',desc:'گوجه، خیار، پیاز با آب لیمو',ingr:'گوجه، خیار، پیاز',w:'۲۵۰گ',cat:'',badge:'',img:'pish-1.jpg'},
+    {id:'drink1',name:'دوغ محلی',desc:'دوغ تازه با نعناع خشک',ingr:'ماست، آب، نعناع',w:'۳۳۰ml',cat:'',badge:'',img:'drink-1.jpg'},
+  ],
+  dinner:[
+    {id:'dn1',name:'جوجه‌کباب شاندیزی',desc:'جوجه مرینیت با زعفران، لیمو و ادویه مخصوص',ingr:'مرغ، زعفران، لیمو',w:'۴۵۰گ',cat:'best',badge:'پرفروش',img:'dinner-1.jpg'},
+    {id:'dn2',name:'ران مرغ باربیکیو سامین',desc:'ران مرغ با سس باربیکیو اختصاصی',ingr:'ران مرغ، سس باربیکیو، ادویه',w:'۵۰۰گ',cat:'special',badge:'ویژه',img:'dinner-2.jpg'},
+  ],
+};
+
+const FALLBACK='https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=70&fit=crop';
+
+const REVIEWS=[
+  {n:'علی محمدی',a:'ع',role:'مشتری ۵ ساله',t:'بهترین قورمه‌سبزی شیراز. هیچ‌وقت ناامیدم نکردن!',d:'۱۴۰۵/۰۳/۱۵',s:5},
+  {n:'مریم رضایی',a:'م',role:'خانواده',t:'زرشک‌پلوشون فوق‌العاده‌ست. ۳ ساله فقط از سامین سفارش میدم.',d:'۱۴۰۵/۰۳/۱۲',s:5},
+  {n:'رضا کریمی',a:'ر',role:'پدر خانواده',t:'کوبیده‌شون دقیقاً مثل دست‌پخت خونگیه. بچه‌ها عاشقشن.',d:'۱۴۰۵/۰۳/۱۰',s:5},
+  {n:'سارا احمدی',a:'س',role:'کارمند',t:'ارسال رایگان و سریع. غذا همیشه داغ میرسه.',d:'۱۴۰۵/۰۳/۰۸',s:5},
+  {n:'امیر نوری',a:'ا',role:'مشتری',t:'۱۸ سال تجربه کاملاً مشخصه. کیفیت ثابته.',d:'۱۴۰۵/۰۳/۰۵',s:5},
+  {n:'فاطمه حسینی',a:'ف',role:'خانه‌دار',t:'فالوده شیرازیشون اصیله. حتماً امتحان کنید!',d:'۱۴۰۵/۰۳/۰۲',s:5},
+];
+
+const POPUPS=[
+  {svg:'<path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>',badge:'جشنواره سامین',title:'جشنواره خرید سامین',body:'با خرید بالای ۱,۵۰۰,۰۰۰ تومان',disc:'نوشابه خانواده هدیه 🥤',btn:'همین الان سفارش بده'},
+  {svg:'<polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',badge:'پیشنهاد ویژه',title:'ران مرغ شاندیزی',body:'فقط تا پایان امروز',disc:'۲۵٪ تخفیف 🔥',btn:'از تخفیف استفاده کن'},
+];
+
+/* ── THEME ── */
+(()=>{
+  const t=localStorage.getItem('samin-theme')||'light';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').addEventListener('click',()=>{
+    const c=document.documentElement.getAttribute('data-theme');
+    const n=c==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',n);
+    localStorage.setItem('samin-theme',n);
+  });
+})();
+
+/* ── HEADER SCROLL ── */
+window.addEventListener('scroll',()=>{document.getElementById('app-hdr').classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}}));
+
+/* ── HERO BANNER ── */
+(()=>{
+  const w=document.getElementById('heroVisual');
+  if(HERO_IMG){w.innerHTML=`<img src="${HERO_IMG}?v=3" alt="سامین" class="hero-img" onerror="this.style.display='none'">`;}
+  else{w.innerHTML=`<div class="hero-img-placeholder"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;}
+})();
+
+/* ── PHONES ── */
+document.getElementById('phones-list').innerHTML=PHONES.map(p=>`
+  <div class="phone-row">
+    <span class="phone-num">${p}</span>
+    <a href="tel:${p}" class="phone-call">${phSVG()} تماس</a>
+  </div>`).join('');
+
+/* ── BUILD FOOD CARD ── */
+function buildFC(f){
+  const orig=P[f.id]||0,disc=DISC[f.id]||0,fin=finalP(f.id);
+  const hasD=disc>0;
+  return`<div class="fc" data-cat="${f.cat}" data-grid="${f._g||''}" data-name="${f.name}">
+    <div class="fc-img">
+      <img src="${f.img}" alt="${f.name}" loading="lazy" onerror="this.src='${FALLBACK}'">
+      ${f.badge&&!hasD?`<span class="fc-tag ${f.cat}">${f.badge}</span>`:''}
+      ${hasD?`<span class="fc-disc-tag">٪${disc}</span>`:''}
+    </div>
+    <div class="fc-body">
+      <div class="fc-name">${f.name}</div>
+      <div class="fc-desc">${f.desc}</div>
+      <div class="fc-ingr">${f.ingr}</div>
+    </div>
+    <div class="fc-foot">
+      <div class="fc-price-blk">
+        <div class="fc-price-row">
+          <span class="fc-price">${fmtP(fin)}</span>
+          <span class="fc-unit">تومان</span>
+        </div>
+        ${hasD?`<span class="fc-old">${fmtP(orig)} تومان</span>`:''}
+      </div>
+      <button class="fc-btn" onclick="openOrder('${f.name}')">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l1.12-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </button>
+    </div>
+  </div>`;
+}
+
+/* ── RENDER ── */
+Object.keys(FOODS).forEach(k=>{
+  const el=document.getElementById('grid-'+k);
+  if(el)el.innerHTML=FOODS[k].map(f=>buildFC({...f,_g:k})).join('');
+});
+
+/* ── OFFERS ── */
+(()=>{
+  const all=[].concat(...Object.values(FOODS)).filter(f=>(DISC[f.id]||0)>0);
+  const cnt=document.getElementById('offer-cnt');
+  if(cnt)cnt.textContent=all.length+' آیتم';
+  if(!all.length){document.getElementById('offers-wrap').style.display='none';return;}
+  document.getElementById('offers-scroll').innerHTML=all.map(f=>{
+    const d=DISC[f.id],orig=P[f.id],fin=finalP(f.id);
+    return`<div class="offer-card">
+      <div class="offer-img"><img src="${f.img}" alt="${f.name}" loading="lazy" onerror="this.src='${FALLBACK}'"></div>
+      <span class="offer-badge">٪${d} تخفیف</span>
+      <div class="offer-body">
+        <div class="offer-name">${f.name}</div>
+        <div class="offer-prices"><span class="offer-old">${fmtP(orig)}</span><span class="offer-new">${fmtP(fin)} ت</span></div>
+        <button class="offer-btn" onclick="openOrder('${f.name}')">${phSVG()}سفارش</button>
+      </div>
+    </div>`;
+  }).join('');
+})();
+
+/* ── FOOD PARTY ── */
+(()=>{
+  const all=[].concat(...Object.values(FOODS)).filter(f=>(DISC[f.id]||0)>0);
+  if(!all.length){document.getElementById('party-sec').style.display='none';return;}
+  document.getElementById('party-grid').innerHTML=all.map(f=>{
+    const d=DISC[f.id],orig=P[f.id],fin=finalP(f.id);
+    return`<div class="party-card">
+      <div class="party-img"><img src="${f.img}" alt="${f.name}" loading="lazy" onerror="this.src='${FALLBACK}'"></div>
+      <span class="party-disc">٪${d}</span>
+      <div class="party-body">
+        <div class="party-name">${f.name}</div>
+        <div class="party-desc">${f.desc}</div>
+        <div class="party-prices"><span class="party-old">${fmtP(orig)}</span><span class="party-new">${fmtP(fin)} تومان</span></div>
+        <button class="party-btn" onclick="openOrder('${f.name}')">${phSVG()}سفارش با تخفیف</button>
+      </div>
+    </div>`;
+  }).join('');
+})();
+
+/* ── COUNTDOWN ── */
+(()=>{
+  let rem=5*3600;
+  const tfa=n=>String(n).padStart(2,'0').replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[+d]);
+  const H=document.getElementById('cd-h'),M=document.getElementById('cd-m'),S=document.getElementById('cd-s');
+  function flip(el,v){el.classList.add('flip');setTimeout(()=>{el.textContent=v;el.classList.remove('flip');},140);}
+  setInterval(()=>{
+    if(rem<0)rem=5*3600;
+    const h=Math.floor(rem/3600),m=Math.floor((rem%3600)/60),s=rem%60;
+    const fh=tfa(h),fm=tfa(m),fs=tfa(s);
+    if(H.textContent!==fh)flip(H,fh);
+    if(M.textContent!==fm)flip(M,fm);
+    if(S.textContent!==fs)flip(S,fs);
+    rem--;
+  },1000);
+})();
+
+/* ── REVIEWS ── */
+(()=>{
+  const star='<svg viewBox="0 0 24 24" width="12" height="12" fill="#F5A623"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+  document.getElementById('rev-scroll').innerHTML=REVIEWS.map(r=>`
+    <div class="rev-card">
+      <div class="rev-stars">${star.repeat(r.s)}</div>
+      <div class="rev-txt">"${r.t}"</div>
+      <div class="rev-auth">
+        <div class="rev-av">${r.a}</div>
+        <div><div class="rev-name">${r.n}</div><div class="rev-role">${r.role}</div><div class="rev-date">${r.d}</div></div>
+      </div>
+    </div>`).join('');
+})();
+
+/* ── FILTER ── */
+document.querySelectorAll('.fpill').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.fpill').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    const f=btn.dataset.f;
+    document.querySelectorAll('.fc').forEach(c=>{
+      if(f==='all'){c.classList.remove('hidden');return;}
+      const cat=c.dataset.cat||'',grid=c.dataset.grid||'';
+      const show=(f==='eco'&&cat==='eco')||(f==='kh'&&grid==='kh')||(f==='kb'&&grid==='kb')||(f==='khorak'&&grid==='khorak')||(f==='polo'&&grid==='polo')||(f==='dinner'&&grid==='dinner');
+      c.classList.toggle('hidden',!show);
+    });
+    document.getElementById('menu-area').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+/* ── QUICK NAV ── */
+document.querySelectorAll('.qnav-btn').forEach(b=>{
+  b.addEventListener('click',()=>{const s=document.getElementById(b.dataset.sec);if(s)s.scrollIntoView({behavior:'smooth',block:'start'});});
+});
+
+/* ── SEARCH ── */
+document.getElementById('search-input').addEventListener('input',function(){
+  const q=this.value.trim().toLowerCase();
+  document.querySelectorAll('.fc').forEach(c=>{
+    if(!q){c.classList.remove('hidden');return;}
+    c.classList.toggle('hidden',!(c.dataset.name||'').toLowerCase().includes(q));
+  });
+});
+
+/* ── ORDER MODAL ── */
+const modal=document.getElementById('orderModal');
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show');});
+function openOrder(name){
+  document.getElementById('modalFood').textContent=name;
+  document.getElementById('modalPhones').innerHTML=PHONES.map(p=>`
+    <div class="modal-ph-row">
+      <span class="modal-ph-num">${p}</span>
+      <a href="tel:${p}" class="modal-call">${phSVG()}تماس</a>
+    </div>`).join('');
+  modal.classList.add('show');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('show');document.getElementById('popBd').classList.remove('show');}});
+
+/* ── STATS ── */
+let cnt=false;
+new IntersectionObserver(([e])=>{
+  if(e.isIntersecting&&!cnt){cnt=true;document.querySelectorAll('.stat-n').forEach(el=>{const t=+el.dataset.n,s=el.dataset.s||'',t0=performance.now();(function tick(now){const p=Math.min((now-t0)/1800,1),ez=1-Math.pow(1-p,3);el.textContent=Math.floor(t*ez).toLocaleString('fa-IR')+s;if(p<1)requestAnimationFrame(tick);})(t0);});}
+},{threshold:.3}).observe(document.getElementById('stats-sec'));
+
+/* ── FAQ ── */
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{const i=q.closest('.faq-item'),on=i.classList.contains('on');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('on'));if(!on)i.classList.add('on');}));
+
+/* ── REVEAL ── */
+const rvO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rvO.unobserve(e.target);}}),{threshold:.06,rootMargin:'0px 0px -12px 0px'});
+document.querySelectorAll('.rv').forEach(el=>rvO.observe(el));
+
+/* ── POPUPS every 3min ── */
+(()=>{
+  const bd=document.getElementById('popBd'),cl=document.getElementById('popClose');
+  let idx=0;
+  function show(){
+    const p=POPUPS[idx%POPUPS.length];
+    document.getElementById('popIcon').innerHTML=`<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--pk)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p.svg}</svg>`;
+    document.getElementById('popBadge').textContent=p.badge;
+    document.getElementById('popTitle').textContent=p.title;
+    document.getElementById('popBody').textContent=p.body;
+    document.getElementById('popDisc').textContent=p.disc;
+    document.getElementById('popBtn').textContent=p.btn;
+    bd.classList.add('show');idx++;
+  }
+  cl.addEventListener('click',()=>bd.classList.remove('show'));
+  bd.addEventListener('click',e=>{if(e.target===bd)bd.classList.remove('show');});
+  setTimeout(()=>{show();setInterval(show,180000);},7000);
+})();
+</script>
+</body>
+</html>
